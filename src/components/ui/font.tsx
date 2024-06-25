@@ -6,7 +6,7 @@ import {
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins'
 import { useFonts } from 'expo-font'
-import { ReactNode } from 'react'
+import { ReactNode, useCallback } from 'react'
 
 import * as SplashScreen from 'expo-splash-screen'
 import { View } from 'react-native'
@@ -26,13 +26,15 @@ export const Font = (props: Props) => {
     Poppins_700Bold,
   })
 
-  const hideSplashScreen = () => SplashScreen.hideAsync()
+  const onLayoutRootView = useCallback(async () => {
+    await SplashScreen.hideAsync()
+  }, [fontsLoaded])
 
   if (!fontsLoaded) return null
 
   return (
     <View
-      onLayout={hideSplashScreen}
+      onLayout={onLayoutRootView}
       style={{ flex: 1 }}
     >
       {props.children}
