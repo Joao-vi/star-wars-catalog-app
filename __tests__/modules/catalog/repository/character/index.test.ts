@@ -1,5 +1,5 @@
 import { CharacterRepository } from '../../../../../src/modules/catalog/repository/character'
-import { GetCharactersInput } from '../../../../../src/modules/catalog/use-cases/use-get-characters'
+import { GetCharactersInput } from '../../../../../src/modules/catalog/use-cases/get-characters/input'
 import { mockedAxios } from '../../../../mocks/axios-mock'
 import {
   GET_CHARACTERS_RESPONSE,
