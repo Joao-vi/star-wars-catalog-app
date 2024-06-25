@@ -18,3 +18,8 @@ export interface CharacterDTO {
   edited: string
   url: string
 }
+
+export type GetCharactersDTO = {
+  page?: number
+  search?: string
+}
