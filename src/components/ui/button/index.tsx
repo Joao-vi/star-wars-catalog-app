@@ -11,6 +11,6 @@ export const Button = ({ children, style, variant, ...props }: ButtonProps) => (
     underlayColor={underlayColor[variant || 'primary']}
     style={variants({ variant, style })}
   >
-    {children}
+    <>{children}</>
   </TouchableHighlight>
 )
