@@ -1,5 +1,5 @@
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
-import { CatalogStack } from '../modules/catalog/routes'
+import { AppStack } from './app-stack'
 
 const theme = {
   ...DefaultTheme,
@@ -12,7 +12,7 @@ const theme = {
 export const Router = () => {
   return (
     <NavigationContainer theme={theme}>
-      <CatalogStack />
+      <AppStack />
     </NavigationContainer>
   )
 }
