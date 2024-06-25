@@ -1,6 +1,6 @@
-import { PaginatedList } from '../../../models/paginated-list'
-import { PaginatedListMapper } from './mapper'
-import { PaginatedListDTO } from './paginated-list-DTO'
+import { PaginatedList } from '../../../../../../src/modules/catalog/models/paginated-list'
+import { PaginatedListMapper } from '../../../../../../src/modules/catalog/repository/shared/paginated-list/mapper'
+import { PaginatedListDTO } from '../../../../../../src/modules/catalog/repository/shared/paginated-list/paginated-list-DTO'
 
 const PAGINATED_LIST_DTO: PaginatedListDTO<[]> = {
   count: 82,

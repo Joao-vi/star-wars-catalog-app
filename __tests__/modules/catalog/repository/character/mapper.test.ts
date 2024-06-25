@@ -1,7 +1,7 @@
-import { Character } from '../../models/character'
-import { Gender } from '../../models/gender'
-import { CharacterDTO } from './DTOs'
-import { CharacterMapper } from './mapper'
+import { Character } from '../../../../../src/modules/catalog/models/character'
+import { Gender } from '../../../../../src/modules/catalog/models/gender'
+import { CharacterDTO } from '../../../../../src/modules/catalog/repository/character/DTOs'
+import { CharacterMapper } from '../../../../../src/modules/catalog/repository/character/mapper'
 
 const CHARACTER_DTO: CharacterDTO = {
   name: 'Luke Skywalker',
