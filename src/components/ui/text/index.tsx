@@ -5,7 +5,7 @@ import { TextVariants, variants } from './variants'
 type ButtonProps = TextVariants & ComponentProps<typeof TextP>
 
 export const Text = ({ size, style, ...props }: ButtonProps) => (
-  <Text
+  <TextP
     {...props}
     style={variants({ size, style })}
   />
