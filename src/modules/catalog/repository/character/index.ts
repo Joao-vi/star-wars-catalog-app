@@ -16,7 +16,7 @@ export class CharacterRepository {
   async getCharacters(input: GetCharactersInput): Promise<PaginatedList<Character>> {
     const params: GetCharactersDTO = {
       page: input.page,
-      search: input.search,
+      search: input.search?.length ? input.search : undefined,
     }
 
     const { data } = await this.httpClient.get<PaginatedListDTO<CharacterDTO>>(`${this.BASE_URL}`, {

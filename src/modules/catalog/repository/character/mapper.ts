@@ -42,9 +42,8 @@ export class CharacterMapper {
       case Gender.NotApplicable:
         return Gender.NotApplicable
       case Gender.Unknown:
-        return Gender.Unknown
       default:
-        throw new Error(`There was an error parsing ${genderDTO} to Gender`)
+        return Gender.Unknown
     }
   }
 

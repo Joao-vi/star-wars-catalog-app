@@ -12,8 +12,10 @@ export const useCharactersList = () => {
     })
 
   return {
-    data: getCharacters?.data,
+    data: getCharacters?.data?.pages.flatMap((item) => item.results),
     isLoading: getCharacters.isLoading,
+    isFetchingNextPage: getCharacters.isFetchingNextPage,
     goToCharacterDetails,
+    nextPage: () => getCharacters.hasNextPage && getCharacters.fetchNextPage(),
   }
 }
