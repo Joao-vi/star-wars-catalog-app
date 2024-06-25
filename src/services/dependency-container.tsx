@@ -1,11 +1,13 @@
 import { ReactNode, createContext, useContext } from 'react'
 import { swapiHttpClient } from '../modules/catalog/infra/swapi-http-client'
 import { CharacterRepository } from '../modules/catalog/repository/character'
+import { MovieRepository } from '../modules/catalog/repository/movie'
 
 type IDependencyContainer = typeof dependencyContainer
 
 const dependencyContainer = {
   characterRepository: new CharacterRepository(swapiHttpClient),
+  movieRepository: new MovieRepository(swapiHttpClient),
 }
 
 const Context = createContext<IDependencyContainer | undefined>(undefined)
