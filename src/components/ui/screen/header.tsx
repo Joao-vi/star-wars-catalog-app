@@ -1,6 +1,7 @@
 import { ComponentProps } from 'react'
 import { Text } from '../text'
 import { View } from 'react-native'
+import { Controls } from './controls'
 
 const Root = (props: ComponentProps<typeof View>) => <View {...props} />
 
@@ -15,4 +16,5 @@ const Title = (props: ComponentProps<typeof Text>) => (
 export const Header = {
   Root,
   Title,
+  Controls,
 }
