@@ -5,7 +5,7 @@ export const Scrollable = (props: ComponentProps<typeof ScrollView>) => {
   return (
     <ScrollView
       keyboardShouldPersistTaps="handled"
-      style={{ flex: 1 }}
+      style={{ flex: 1, gap: 24 }}
       {...props}
     />
   )
@@ -14,7 +14,7 @@ export const Scrollable = (props: ComponentProps<typeof ScrollView>) => {
 export const Fixed = (props: ComponentProps<typeof View>) => {
   return (
     <View
-      style={{ flex: 1 }}
+      style={{ flex: 1, gap: 24 }}
       {...props}
     />
   )
