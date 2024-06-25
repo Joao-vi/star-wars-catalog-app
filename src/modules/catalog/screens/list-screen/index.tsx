@@ -3,7 +3,7 @@ import { Text } from '../../../../components/ui/text'
 import { colors } from '../../../../components/ui/colors'
 import { CharactersList } from './components/characters-list'
 
-export const ListScreen = () => {
+export const CharactersListScreen = () => {
   return (
     <Screen.Root>
       <Screen.Content.Fixed>

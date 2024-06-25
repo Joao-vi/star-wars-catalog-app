@@ -7,7 +7,7 @@ import { Item } from './item'
 import { useCharactersList } from './use-characters-list'
 
 export const CharactersList = () => {
-  const { data, isLoading } = useCharactersList()
+  const { data, isLoading, goToCharacterDetails } = useCharactersList()
 
   return (
     <List.Root
@@ -20,10 +20,10 @@ export const CharactersList = () => {
 
         <List.List
           style={{ marginTop: 12 }}
-          renderItem={(props) => (
+          renderItem={(props: any) => (
             <Item
               data={props.item as any}
-              onSelect={() => {}}
+              onSelect={() => goToCharacterDetails(props.item.id as any)}
             />
           )}
         />
