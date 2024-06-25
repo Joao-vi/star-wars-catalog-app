@@ -8,7 +8,12 @@ export const Root = (props: ComponentProps<typeof KeyboardAvoidingView>) => {
   return (
     <KeyboardAvoidingView
       {...props}
-      style={{ flex: 1, marginTop: top, marginBottom: bottom, padding: 16 }}
+      style={{
+        flex: 1,
+        marginTop: top,
+        marginBottom: bottom,
+        padding: 16,
+      }}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     />
   )
