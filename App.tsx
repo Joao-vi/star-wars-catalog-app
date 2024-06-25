@@ -12,7 +12,7 @@ export default function App() {
       <ReactQueryProvider>
         <SafeAreaProvider>
           <Font>
-            <StatusBar style="auto" />
+            <StatusBar style="dark" />
             <Router />
           </Font>
         </SafeAreaProvider>
