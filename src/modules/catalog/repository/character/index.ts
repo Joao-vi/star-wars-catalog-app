@@ -1,11 +1,11 @@
 import { AxiosInstance } from 'axios'
 import { CharacterDTO, GetCharactersDTO } from './DTOs'
-import { GetCharactersInput } from '../../use-cases/use-get-characters'
 import { PaginatedListDTO } from '../shared/paginated-list/paginated-list-DTO'
 import { PaginatedList } from '../../models/paginated-list'
 import { Character } from '../../models/character'
 import { PaginatedListMapper } from '../shared/paginated-list/mapper'
 import { CharacterMapper } from './mapper'
+import { GetCharactersInput } from '../../use-cases/get-characters/input'
 
 export class CharacterRepository {
   private BASE_URL = 'people'
