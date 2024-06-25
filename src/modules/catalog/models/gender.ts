@@ -4,3 +4,19 @@ export enum Gender {
   Unknown = 'unknown',
   NotApplicable = 'n/a',
 }
+
+export const getGenderLabel = (gender: Gender) => {
+  switch (gender) {
+    case Gender.Male:
+      return 'Masculino'
+
+    case Gender.Female:
+      return 'Feminino'
+
+    case Gender.Unknown:
+      return 'Desconhecido'
+
+    case Gender.NotApplicable:
+      return 'Não aplicável'
+  }
+}
