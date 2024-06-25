@@ -32,6 +32,16 @@ export const variants = cva(
           fontSize: 20,
           lineHeight: 21,
         },
+
+        '2xl': {
+          fontSize: 24,
+          lineHeight: 25,
+        },
+
+        '3xl': {
+          fontSize: 28,
+          lineHeight: 29,
+        },
       },
     },
 
