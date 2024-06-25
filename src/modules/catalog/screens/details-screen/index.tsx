@@ -2,14 +2,14 @@ import { Screen } from '../../../../components/ui/screen'
 import { Text } from '../../../../components/ui/text'
 import { colors } from '../../../../components/ui/colors'
 import { Details } from './components/details'
-import { useCatalogNavigation } from '../../routes'
 import { Show } from '../../../../components/ui/show'
 import { ActivityIndicator } from 'react-native'
 import { useDetailsScreen } from './use-details-screen'
+import { useNavigation } from '@react-navigation/native'
 
-export const DetailsScreen = () => {
+export const CharacterDetailsScreen = () => {
   const { params, getCharacterById } = useDetailsScreen()
-  const { goBack } = useCatalogNavigation()
+  const { goBack } = useNavigation()
 
   if (typeof params.id === 'undefined' || getCharacterById.isError) goBack()
 
