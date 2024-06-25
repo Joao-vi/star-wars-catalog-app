@@ -6,6 +6,7 @@ import { Character } from '../../models/character'
 import { PaginatedListMapper } from '../shared/paginated-list/mapper'
 import { CharacterMapper } from './mapper'
 import { GetCharactersInput } from '../../use-cases/get-characters/input'
+import { GetCharacterByIdInput } from '../../use-cases/get-character-by-id/input'
 
 export class CharacterRepository {
   private BASE_URL = 'people'
@@ -28,5 +29,11 @@ export class CharacterRepository {
       ...paginatedList,
       results: paginatedList.results.map((item) => CharacterMapper.toDomain(item)),
     }
+  }
+
+  async getCharacterById(input: GetCharacterByIdInput): Promise<Character> {
+    const { data } = await this.httpClient.get<CharacterDTO>(`${this.BASE_URL}/${input.id}`)
+
+    return CharacterMapper.toDomain(data)
   }
 }
