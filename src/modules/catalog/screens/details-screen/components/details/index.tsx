@@ -1,8 +1,7 @@
 import { View } from 'react-native'
-import { Text } from '../../../../../../components/ui/text'
-import { Button } from '../../../../../../components/ui/button'
 import { GeneralDetails } from './general-details'
 import { MoviesList } from './movies-list'
+import { BookmarkButton } from './bookmark-button'
 
 export const Details = () => {
   return (
@@ -11,9 +10,7 @@ export const Details = () => {
 
       <MoviesList />
 
-      <Button>
-        <Text style={{ color: 'white' }}>Favoritar</Text>
-      </Button>
+      <BookmarkButton />
     </View>
   )
 }
