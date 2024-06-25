@@ -4,6 +4,7 @@ import { colors } from '../components/ui/colors'
 import { Text } from '../components/ui/text'
 import { Search } from '../components/ui/icons/search'
 import { Bookmark } from '../components/ui/icons/bookmark'
+import { BookmarkListScreen } from '../modules/bookmark/screens/list-screen'
 
 export type AppTabBottomRouteNames = {
   CharactersListScreen: undefined
@@ -87,7 +88,7 @@ export function AppTabNavigator() {
 
       <Tab.Screen
         name="FavoriteList"
-        component={CharactersListScreen}
+        component={BookmarkListScreen}
       />
     </Tab.Navigator>
   )
