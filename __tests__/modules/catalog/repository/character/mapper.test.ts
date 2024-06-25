@@ -1,3 +1,4 @@
+import { Gender } from '../../../../../src/modules/catalog/models/gender'
 import { CharacterMapper } from '../../../../../src/modules/catalog/repository/character/mapper'
 import { CHARACTER_DTO, CHARACTER } from '../../../../mocks/character-mock'
 
@@ -10,11 +11,11 @@ describe('CharacterMapper', () => {
     expect(output).toEqual(CHARACTER)
   })
 
-  test('When I give a wrong gender DTO, it should throw', () => {
+  test('When I give a wrong gender DTO, it should return Gender.Unknown', () => {
     const input = { ...CHARACTER_DTO }
     input.gender = 'any_gender'
 
-    expect(() => CharacterMapper.toDomain(input)).toThrow()
+    expect(CharacterMapper.toDomain(input).gender).toBe(Gender.Unknown)
   })
 
   test('When I give a wrong URL DTO, it should throw', () => {
