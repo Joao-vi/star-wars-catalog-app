@@ -18,5 +18,5 @@ export const useDependencyContainer = () => {
 }
 
 export const DependencyContainerProvider = (props: { children: ReactNode }) => (
-  <Context.Provider value={dependencyContainer}></Context.Provider>
+  <Context.Provider value={dependencyContainer}>{props.children}</Context.Provider>
 )
